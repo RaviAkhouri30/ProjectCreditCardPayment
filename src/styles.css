@@ -1,1 +1,236 @@
 /* You can add global styles to this file, and also import other style files */
+/* // regular style toast */
+@import '~ngx-toastr/toastr';
+
+.header {
+    max-width       : 100%;
+    max-height      : 100px;
+    background-color: #d9dfe6;
+    padding-top     : 25px;
+    padding-left    : 25px;
+    padding-bottom  : 25px;
+    padding-right   : 25px;
+    margin          : 0;
+    font-family     : 'Times New Roman', Times, serif;
+    font-size       : 28px;
+    font-weight     : 900;
+}
+
+.footer {
+    width           : 100%;
+    height          : 100px;
+    background-color: #0f0e0e;
+    padding         : 0%;
+    margin          : 0%;
+    font-family     : 'Times New Roman', Times, serif;
+}
+
+.content-body {
+    background-color: #ececec;
+    padding         : 0;
+    margin          : 0;
+    font-family     : 'Times New Roman', Times, serif;
+}
+
+.nav-btn {
+    position        : relative;
+    background-color: #0d64c7;
+    padding         : 14px 12px;
+    border-radius   : 5px;
+    box-shadow      : 0px 0px #0d64c7;
+    color           : #ffffff;
+    font-weight     : 500;
+    text-shadow     : 2px 1px #111010;
+    margin          : 0;
+    transition      : all 0.2s;
+    border-color    : #0d64c7;
+    border-width    : 0;
+    border-collapse : collapse;
+    border-radius   : 0;
+    height          : 100%;
+    border-right    : 1px solid #083363;
+}
+
+.nav-btn:hover {
+    background-color: #0055b6;
+    cursor          : pointer;
+}
+
+.margin-zero {
+    margin: 0;
+}
+
+.nav-style {
+    width           : 100%;
+    margin          : 0;
+    padding         : 0;
+    padding-left    : 5px;
+    background-color: #083363;
+}
+
+ul {
+    padding        : 0;
+    margin         : 0;
+    width          : auto;
+    list-style-type: none;
+    display        : table-row;
+}
+
+li {
+    padding: 0;
+    width  : auto;
+    margin : 0;
+    display: table-cell;
+}
+
+.content-section {
+    width  : 100%;
+    padding: 20px 10px;
+}
+
+.heading-section {
+    font-weight: 800;
+    font-size  : 32px;
+}
+
+.credit-card-container {
+    display      : flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap    : wrap;
+}
+
+.credit-card {
+    position        : relative;
+    border-radius   : 6px;
+    background-color: rgb(46, 42, 41);
+    height          : 180px;
+    width           : 270px;
+    margin          : 10px 5px;
+}
+
+.bank-name {
+    position   : relative;
+    width      : 40px;
+    padding    : 7px 9px;
+    margin-left: auto;
+    color      : #d9dfe6;
+}
+
+.cardNo {
+    width      : 100%;
+    margin-top : 50px;
+    margin-left: 20px;
+    color      : #e8ecf1;
+    font-weight: 900;
+    font-size  : 18px;
+}
+
+.exp-date {
+    position  : relative;
+    margin-top: 10px;
+    width     : 100%;
+}
+
+.valid-thru {
+    position     : relative;
+    font-size    : 8px;
+    width        : 40%;
+    text-align   : right;
+    margin       : 0;
+    margin-right : 0;
+    padding-right: 5px;
+    color        : #ffffff;
+}
+
+.e-date {
+    margin-left: 116px;
+    margin-top : -20px;
+    position   : absolute;
+    font-size  : 20px;
+    width      : 30%;
+    color      : #ffffff;
+}
+
+.cvv {
+    color      : #ffffff;
+    font-size  : 12px;
+    margin-left: 10px;
+}
+
+.cvv-no {
+    background-color: #ffffff;
+    color           : #000000;
+}
+
+.card-holder-name {
+    font-size  : 16px;
+    font-weight: 900;
+    color      : #ffffff;
+    margin-left: 10px;
+}
+
+.amount {
+    color      : #e8ecf1;
+    width      : 30%;
+    margin-left: auto;
+    font-size  : 14px;
+}
+
+.payment-box {
+    width        : 400px;
+    padding      : 20px 10px;
+    border-radius: 8px;
+    margin       : 10px auto;
+    box-shadow   : 1px 2px 2px 2px #111010;
+}
+
+input[type=text] {
+    width           : 100%;
+    padding         : 12px 20px;
+    box-sizing      : border-box;
+    /* border       :1px solid #dddddd; */
+    /* border-radius: 4px; */
+    border          : none;
+    border-bottom   : 1px solid #dddddd;
+    margin          : 5px;
+    border-radius   : 10px;
+}
+
+label {
+    color         : rgb(54, 51, 50);
+    font-weight   : 700;
+    padding-left  : 9px;
+    padding-top   : 10px;
+    padding-bottom: 10px;
+}
+
+.form-action .make-payment-btn {
+    width           : 80%;
+    position        : relative;
+    margin-left     : 38px;
+    padding         : 14px 16px;
+    border-radius   : 10px;
+    box-shadow      : 3px 2px rgb(54, 51, 50);
+    background-color: #0d64c7;
+    color           : #d9dfe6;
+    font-weight     : 800;
+    border          : none;
+    transition      : all 0.2s;
+    outline         : none;
+}
+
+.form-action .make-payment-btn:hover {
+    background-color: #0759b6;
+    box-shadow      : 1px 2px rgb(54, 51, 50);
+}
+
+.form-action {
+    margin     : 15px 0px;
+    width      : 100%;
+    align-items: center;
+}
+
+.error {
+    color    : #c40000;
+    font-size: 12px;
+}

@@ -1,0 +1,68 @@
+<div class="payment-box">
+    <form [formGroup]="creditCardInfoform">
+
+        <label for="creditCardNo">Credit Card Number*</label>
+        <input type="text" name="creditCardNo" id="creditCardNo" formControlName="creditCardNumber"
+            placeholder="Please Enter Card Number" appCreditCardNumber />
+
+        <div class="error"
+            *ngIf="creditCardInfoform.controls.creditCardNumber.touched && creditCardInfoform.controls.creditCardNumber?.errors">
+            <span *ngIf="creditCardInfoform.controls.creditCardNumber.errors?.required">
+                {{ msg.FORM_VALIDATION.INVALID_CREDIT_CARD_NUMBER_REQUIRED }}
+            </span>
+            <span *ngIf="creditCardInfoform.controls.creditCardNumber.errors?.minlength">
+                {{ msg.FORM_VALIDATION.INVALID_CREDIT_CARD_NUMBER }}
+            </span>
+        </div>
+
+        <label for="creditCardHolder">Card Holder Name*</label>
+        <input type="text" name="creditCardHolder" id="creditCardHolder" formControlName="creditCardHolderName"
+            placeholder="Please Enter Card Holder Name" appOnlyAlphabets [maxLength]="20" />
+
+        <div class="error"
+            *ngIf="creditCardInfoform.controls.creditCardHolderName.touched && creditCardInfoform.controls.creditCardHolderName?.errors">
+            <span *ngIf="creditCardInfoform.controls.creditCardHolderName.errors?.required">
+                {{ msg.FORM_VALIDATION.INVALID_CREDIT_CARD_HOLDER_NAME_REQ }}
+            </span>
+            <span *ngIf="creditCardInfoform.controls.creditCardHolderName.errors?.minlength">
+                {{ msg.FORM_VALIDATION.INVALID_CREDIT_CARD_HOLDER_NAME }}
+            </span>
+        </div>
+
+        <label for="expDate">Expiration Date*</label>
+        <input type="text" name="expDate" id="expDate" formControlName="expirationDate" placeholder="MM-YY"
+            appCreditCardExpDate />
+
+        <div class="error"
+            *ngIf="creditCardInfoform.controls.expirationDate.touched && creditCardInfoform.controls.expirationDate?.errors">
+            <span *ngIf="creditCardInfoform.controls.expirationDate.errors?.required">
+                {{ msg.FORM_VALIDATION.INVALID_EXPIRY_DATE }}
+            </span>
+        </div>
+
+        <label for="secCode">Security Code</label>
+        <input type="text" name="secCode" id="secCode" formControlName="ccv" placeholder="xxx" appOnlyNumbers
+            [maxLength]="3" />
+
+        <div class="error" *ngIf="creditCardInfoform.controls.ccv.touched && creditCardInfoform.controls.ccv?.errors">
+            <span *ngIf="creditCardInfoform.controls.ccv.errors?.minlength">
+                {{ msg.FORM_VALIDATION.INVALID_CCV }}
+            </span>
+        </div>
+
+        <label for="amt">Amount*</label>
+        <input type="text" name="amt" id="amt" formControlName="amount" placeholder="1000.00" appOnlyAmount />
+
+        <div class="error"
+            *ngIf="creditCardInfoform.controls.amount.touched && creditCardInfoform.controls.amount?.errors">
+            <span *ngIf="creditCardInfoform.controls.amount.errors?.required">
+                {{ msg.FORM_VALIDATION.INVALID_AMOUNT }}
+            </span>
+        </div>
+
+        <div class="form-action">
+            <button type="button" (click)="doPayment()" class="make-payment-btn">Make Payment</button>
+        </div>
+
+    </form>
+</div>
